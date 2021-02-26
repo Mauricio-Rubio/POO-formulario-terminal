@@ -38,12 +38,15 @@ public class InterfazUsuario {
             System.out.println("Ingrese el estado donde reside");
             lugar = sc.nextLine();
             if(usuario.usuario.sexo.equals("M")){
-                System.out.println("Entamos a M");
                 usuario.usuario.folio = new Registro(fecha, lugar);
                 usuario.usuario.folio.generarFolioM();
                 System.out.println(usuario.usuario.folio);
+                System.out.println("Usuario hombre");
             }else{
-                System.out.println("el usuario es mujer");
+                usuario.usuario.folio = new Registro(fecha, lugar);
+                usuario.usuario.folio.generarFolioF();
+                System.out.println(usuario.usuario.folio);
+                System.out.println("Usuario mujer");
             }
         }
 }
