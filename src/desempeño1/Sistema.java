@@ -42,6 +42,7 @@ public class Sistema {
                 linea.println("Nombre: " + usuario.usuario.getNombre());
                 linea.println("Correo electrónico: " + usuario.usuario.getCorreo());
                 linea.println("Contacto: " + usuario.usuario.getNumero());
+                linea.println("fecha: " + usuario.usuario.folio.getFecha());
                 /*linea.println(usuario.getNombre());
                 linea.println(usuario.getContraseña());//Esta cifrada al acceder al método getContraseña
                 linea.println(usuario.getCuenta().getId());
@@ -62,6 +63,7 @@ public class Sistema {
                 linea.println("Nombre: " + usuario.usuario.getNombre());
                 linea.println("Correo electrónico: " + usuario.usuario.getCorreo());
                 linea.println("Contacto: " + usuario.usuario.getNumero());
+                linea.println("fecha: " + usuario.usuario.folio.getFecha());
                 /*linea.println(usuario.getNombre());
                 linea.println(usuario.getContraseña());
                 linea.println(usuario.getCuenta().getId());

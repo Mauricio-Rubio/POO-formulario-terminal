@@ -35,16 +35,17 @@ public class InterfazUsuario {
         String lugar;
         System.out.println("Ingrese la fecha en formato dd-mm-aaaa");
         fecha = sc.nextLine();
+        String fechaRes = fecha.replace("-","");
         System.out.println("Ingrese el estado donde reside");
         lugar = sc.nextLine();
         if (usuario.usuario.sexo.equals("M")) {
-            usuario.usuario.folio = new Registro(fecha, lugar);
+            usuario.usuario.folio = new Registro(fechaRes, lugar);
             usuario.usuario.folio.generarFolioM();
             System.out.println(usuario.usuario.folio);
             System.out.println("Usuario hombre");
             return true;
         } else {
-            usuario.usuario.folio = new Registro(fecha, lugar);
+            usuario.usuario.folio = new Registro(fechaRes, lugar);
             usuario.usuario.folio.generarFolioF();
             System.out.println(usuario.usuario.folio);
             System.out.println("Usuario mujer");
