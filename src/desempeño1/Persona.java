@@ -23,4 +23,16 @@ public class Persona {
         numero = celular;
         this.correo = correo;
     }
+    
+    public String getNombre(){
+        return nombre;
+    }
+    
+    public String getEdad(){
+        return edad;
+    }
+    
+    public String getSexo(){
+        return sexo;
+    }
 }

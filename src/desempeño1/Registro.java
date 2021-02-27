@@ -42,5 +42,16 @@ public class Registro {
         folio = "M" + aleatorio;
         System.out.println(folio);
     }
-
+    
+    public String getFolio(){
+        return folio;
+    }
+    
+    public String getFecha(){
+        return fecha;
+    }
+    
+    public String getLugar(){
+        return lugar;
+    }
 }

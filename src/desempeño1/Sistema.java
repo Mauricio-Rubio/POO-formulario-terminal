@@ -1,5 +1,8 @@
 package desempeño1;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Sistema {
@@ -15,10 +18,55 @@ public class Sistema {
             InterfazUsuario usuario = new InterfazUsuario();
             usuario.nuevaPersona();
             usuario.registrarUsuario(usuario);
+            BaseDatos(usuario);
         }else if(eleccion ==2){
             System.out.println("En mantenimiento");
         }else{
             System.out.println("Ingrese una opción válida por favor");
         }
     }
+    
+    public void BaseDatos(InterfazUsuario usuario) {
+        File archivo; //manipula el archivo
+        FileWriter escribir; // escribir en el archivo
+        PrintWriter linea; // 
+        archivo = new File("cajeroUsuario.txt");
+        if (!archivo.exists()) {
+            try {
+                archivo.createNewFile();
+                escribir = new FileWriter(archivo, true);
+                linea = new PrintWriter(escribir);
+                //escribir en el archivo
+                linea.println(usuario.usuario.folio.getFolio());
+                linea.println(usuario.usuario.getNombre());
+                linea.println(usuario.usuario.getEdad());
+                linea.println(usuario.usuario.getSexo());
+                /*linea.println(usuario.getNombre());
+                linea.println(usuario.getContraseña());//Esta cifrada al acceder al método getContraseña
+                linea.println(usuario.getCuenta().getId());
+                linea.println(usuario.getCuenta().consultar());*/
+                //System.out.println(usuario.getId());
+                //System.out.println(contraseña2);
+                //linea.println();
+                linea.close();
+                escribir.close();
+            } catch (Exception e) {
+            }
+        } else {
+            try {
+                escribir = new FileWriter(archivo, true);
+                linea = new PrintWriter(escribir);
+                //escribir en el archivo
+                linea.println(usuario.usuario.folio.getFolio());
+                /*linea.println(usuario.getNombre());
+                linea.println(usuario.getContraseña());
+                linea.println(usuario.getCuenta().getId());
+                linea.println(usuario.getCuenta().consultar());*/
+                //linea.println(email);
+                linea.close();
+                escribir.close();
+            } catch (Exception e) {
+            }
+        }
+    }//acabo
 }
