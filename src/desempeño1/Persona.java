@@ -7,6 +7,7 @@ public class Persona {
     String sexo;
     String edad;
     Registro folio;
+    Salud salud;
 
 
     

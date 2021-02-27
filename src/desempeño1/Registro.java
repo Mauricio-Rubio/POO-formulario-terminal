@@ -29,7 +29,7 @@ public class Registro {
         String aleatorio = String.valueOf(n);
         //aleatorio = rnd.nextInt()*100 + 0;
         //String nAleatorio = String.valueOf(aleatorio);
-        folio = "M" + aleatorio;
+        folio = "H" + aleatorio;
         System.out.println(folio);
     }
 
@@ -39,7 +39,7 @@ public class Registro {
         String aleatorio = String.valueOf(n);
         //aleatorio = rnd.nextInt()*100 + 0;
         //String nAleatorio = String.valueOf(aleatorio);
-        folio = "F" + aleatorio;
+        folio = "M" + aleatorio;
         System.out.println(folio);
     }
 
