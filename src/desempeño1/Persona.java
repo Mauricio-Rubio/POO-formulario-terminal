@@ -32,6 +32,14 @@ public class Persona {
         return edad;
     }
     
+    public String getNumero(){
+        return String.valueOf(numero);
+    }
+    
+    public String getCorreo(){
+        return correo;
+    }
+    
     public String getSexo(){
         return sexo;
     }

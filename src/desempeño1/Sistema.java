@@ -30,7 +30,7 @@ public class Sistema {
         File archivo; //manipula el archivo
         FileWriter escribir; // escribir en el archivo
         PrintWriter linea; // 
-        archivo = new File("cajeroUsuario.txt");
+        archivo = new File("registroVacunación.txt");
         if (!archivo.exists()) {
             try {
                 archivo.createNewFile();
@@ -39,8 +39,8 @@ public class Sistema {
                 //escribir en el archivo
                 linea.println(usuario.usuario.folio.getFolio());
                 linea.println(usuario.usuario.getNombre());
-                linea.println(usuario.usuario.getEdad());
-                linea.println(usuario.usuario.getSexo());
+                linea.println(usuario.usuario.getCorreo());
+                linea.println(usuario.usuario.getNumero());
                 /*linea.println(usuario.getNombre());
                 linea.println(usuario.getContraseña());//Esta cifrada al acceder al método getContraseña
                 linea.println(usuario.getCuenta().getId());
