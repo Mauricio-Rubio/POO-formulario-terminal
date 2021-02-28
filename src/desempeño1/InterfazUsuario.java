@@ -9,7 +9,7 @@ public class InterfazUsuario {
 
     public Persona nuevaPersona() {
         String nombre;
-        int celular;
+        String celular;
         String correo;
         String sexo;
         String edad;
@@ -21,9 +21,8 @@ public class InterfazUsuario {
         System.out.println("Ingrese M para masculino, F para femenino");
         sexo = sc.nextLine();
         System.out.println("Ingrese su teléfono celular");
-        celular = sc.nextInt();
+        celular = sc.nextLine();
         System.out.println("Ingrese su correo");
-        sc.nextLine();
         correo = sc.nextLine();
         usuario = new Persona(nombre, sexo, edad, celular, correo);
         System.out.println(usuario);

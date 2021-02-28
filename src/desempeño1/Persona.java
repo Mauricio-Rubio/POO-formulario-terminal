@@ -2,7 +2,7 @@ package desempeño1;
 
 public class Persona {
     String nombre;
-    int numero;
+    String numero;
     String correo;
     String sexo;
     String edad;
@@ -13,15 +13,26 @@ public class Persona {
     
     @Override
     public String toString(){
-        return ""+nombre+" , telefono: "+numero+" , correo; "+correo+" , sexo: "+sexo+" , folio: "+folio; 
+        return ""+nombre+" , telefono: "+numero+" , correo: "+correo+" , sexo: "+sexo+" ,  "+folio; 
     }
     
-    public  Persona (String nombre, String sexo, String edad, int celular, String correo){
+    public  Persona (String nombre, String sexo, String edad, String celular, String correo){
         this.nombre = nombre;
         this.sexo = sexo;
         this.edad = edad;
         numero = celular;
         this.correo = correo;
+    }
+    
+    
+    public Persona(String nombre, String correo, String tel){
+        this.nombre = nombre;
+        this.correo = correo;
+        this.numero = tel;
+      /*  this.folio.fecha=datos.fecha;
+        this.folio.lugar=datos.lugar;
+        this.folio.folio=datos.folio;*/
+        
     }
     
     public String getNombre(){

@@ -11,13 +11,19 @@ public class Registro {
 
     @Override
     public String toString() {
-        return "Folio generado: " + folio + " , el: " + fecha + " , para alcaldía: " + lugar;
+        return " " + folio + " , " + fecha + " ,  " + lugar;
     }
 
     public void registrar(Persona usuario) {
 
     }
 
+    public Registro(String folio, String fecha, String lugar) {
+        this.folio = folio;
+        this.fecha = fecha;
+        this.lugar= lugar;
+    }
+    
     public Registro(String fecha, String lugar) {
         this.fecha = fecha;
         this.lugar = lugar;
