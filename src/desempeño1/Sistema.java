@@ -27,7 +27,7 @@ public class Sistema {
         do{
             
         
-        System.out.println("1 para registrarse, 2 para ingresar");
+        System.out.println("1 para registrarse, 2 para ingresar, 3 salir");
         eleccion = sc.nextInt();
         if (eleccion == 1) {
             InterfazUsuario usuario = new InterfazUsuario();
@@ -43,12 +43,28 @@ public class Sistema {
                 personaLogin = usuarioActivo;
 
                 //personaLogin.folio.folio=folioLogin;
-                personaLogin.sexo = String.valueOf(folioLogin.charAt(0));
+                personaLogin.sexo = String.valueOf(folioLogin.charAt(7));
                 System.out.println("Registro Encontrado");
-                System.out.println(personaLogin.folio);
-                System.out.println(personaLogin.nombre);
+                System.out.println("1 para consultar sus datos, 2 para actualizar datos");
+                eleccion = sc.nextInt();
+                if(eleccion == 1){
+                    System.out.println(personaLogin);
+                }else if (eleccion == 2){
+                    System.out.println("Ingrese su correo electronico");
+                    sc.nextLine();
+                    personaLogin.correo=sc.nextLine();
+                    System.out.println("Ingrese su numero de contacto");
+                    personaLogin.numero=sc.nextLine();
+                    actualizarUsuario(personaLogin);
+                }
+                
+                
             }
-        } else {
+        }else if(eleccion == 3){
+            break;
+        } 
+        
+        else {
             System.out.println("Ingrese una opción válida por favor");
         }
         }while(eleccion == 1 || eleccion == 2);
@@ -57,7 +73,7 @@ public class Sistema {
     public boolean buscarFolio(String folio) {
         File archivo;  //manipular un archivo
         FileReader leer; //lector
-        String cadena, folioUsuario = "", nombreUsuario = "", correoUsuario = "", contactoUsuario = "", fechaRegistro = "", lugarUsuario = "";
+        String cadena, folioUsuario = "", nombreUsuario = "", correoUsuario = "", contactoUsuario = "", fechaRegistro = "", lugarUsuario = "" ;
         BufferedReader almacenamiento;
         archivo = new File("registroVacunación.txt");
         try {
@@ -82,13 +98,20 @@ public class Sistema {
                     if (cadena != null && folio.equals(folioUsuario)) {
                         // Persona userBusqueda = new Persona(nombreUsuario, correoUsuario, contactoUsuario , fechaRegistro, folioUsuario);
                         //Registro registroBusqueda = new Registro(folioUsuario, fechaRegistro, lugarUsuario);
+                        /*if("M".equals(String.valueOf(folioUsuario.charAt(7)))){
+                            sexoUsuario="M";
+                        }else if("F".equals(String.valueOf(folioUsuario.charAt(7)))){
+                            sexoUsuario="SJ";
+                        }*/
                         Persona userBusqueda = new Persona(nombreUsuario, correoUsuario, contactoUsuario);
-                        userBusqueda.folio = new Registro(folioUsuario, fechaRegistro, lugarUsuario);
+                        userBusqueda.folio = new Registro(folioUsuario, fechaRegistro, lugarUsuario); 
+                        System.out.println(userBusqueda.getSexo());
                         //userBusqueda.folio.folio=folioUsuario;
                         //userBusqueda.folio.fecha=fechaRegistro;
                         //userBusqueda.folio.lugar=lugarUsuario;                        
                         //System.out.println(userBusqueda.getNumero());
                         usuarioActivo = userBusqueda;
+                        //System.out.println(usuarioActivo);
                         leer.close();
                         //System.out.println(userBusqueda);
                         return true;
@@ -176,12 +199,11 @@ public class Sistema {
             while ((cadena = lectura.readLine()) != null) { //comparamos cadena, que alberga lectura de linea, con null
                 String borrarEspacios = cadena.trim();
                 if (borrarEspacios.equals(user.folio.getFolio())) {
-                    escribir.write("Folio: " + user.folio.getFolio() + System.getProperty("line.separator"));
+                    escribir.write("" + user.folio.getFolio() + System.getProperty("line.separator"));
                     escribir.write("" + user.getNombre() + System.getProperty("line.separator"));
-                    escribir.write("Correo" + user.getCorreo() + System.getProperty("line.separator"));
+                    escribir.write("Correo: " + user.getCorreo() + System.getProperty("line.separator"));
                     escribir.write("Contacto: " + user.getNumero() + System.getProperty("line.separator"));
-                    escribir.write("fecha" + user.folio.getFecha() + System.getProperty("line.separator"));
-                    escribir.write("fecha" + user.folio.getLugar() + System.getProperty("line.separator"));
+                    escribir.write("" + user.folio.getFecha() + System.getProperty("line.separator"));
                     for (int i = 0; i < 4; i++) {
                         cadena = lectura.readLine();
                     }
