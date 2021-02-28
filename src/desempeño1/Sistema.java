@@ -23,6 +23,10 @@ public class Sistema {
         int eleccion = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Bienvenido al programa de vacunación que NO es político");
+        
+        do{
+            
+        
         System.out.println("1 para registrarse, 2 para ingresar");
         eleccion = sc.nextInt();
         if (eleccion == 1) {
@@ -47,6 +51,7 @@ public class Sistema {
         } else {
             System.out.println("Ingrese una opción válida por favor");
         }
+        }while(eleccion == 1 || eleccion == 2);
     }
 
     public boolean buscarFolio(String folio) {
