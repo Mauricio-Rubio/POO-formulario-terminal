@@ -43,7 +43,7 @@ public class Sistema {
                 personaLogin = usuarioActivo;
 
                 //personaLogin.folio.folio=folioLogin;
-                personaLogin.sexo = String.valueOf(folioLogin.charAt(0));
+                personaLogin.sexo = String.valueOf(folioLogin.charAt(7));
                 System.out.println("Registro Encontrado");
                 System.out.println("1 para consultar sus datos, 2 para actualizar datos");
                 eleccion = sc.nextInt();
@@ -68,7 +68,7 @@ public class Sistema {
     public boolean buscarFolio(String folio) {
         File archivo;  //manipular un archivo
         FileReader leer; //lector
-        String cadena, folioUsuario = "", nombreUsuario = "", correoUsuario = "", contactoUsuario = "", fechaRegistro = "", lugarUsuario = "", sexoUsuario="";
+        String cadena, folioUsuario = "", nombreUsuario = "", correoUsuario = "", contactoUsuario = "", fechaRegistro = "", lugarUsuario = "" ;
         BufferedReader almacenamiento;
         archivo = new File("registroVacunación.txt");
         try {
@@ -90,8 +90,6 @@ public class Sistema {
                     fechaRegistro = cadena;
                     cadena = almacenamiento.readLine();
                     lugarUsuario = cadena;
-                    cadena = almacenamiento.readLine();
-                    sexoUsuario = cadena;
                     if (cadena != null && folio.equals(folioUsuario)) {
                         // Persona userBusqueda = new Persona(nombreUsuario, correoUsuario, contactoUsuario , fechaRegistro, folioUsuario);
                         //Registro registroBusqueda = new Registro(folioUsuario, fechaRegistro, lugarUsuario);
@@ -100,7 +98,7 @@ public class Sistema {
                         }else if("F".equals(String.valueOf(folioUsuario.charAt(7)))){
                             sexoUsuario="SJ";
                         }*/
-                        Persona userBusqueda = new Persona(nombreUsuario, correoUsuario, contactoUsuario, sexoUsuario);
+                        Persona userBusqueda = new Persona(nombreUsuario, correoUsuario, contactoUsuario);
                         userBusqueda.folio = new Registro(folioUsuario, fechaRegistro, lugarUsuario); 
                         System.out.println(userBusqueda.getSexo());
                         //userBusqueda.folio.folio=folioUsuario;
@@ -150,7 +148,6 @@ public class Sistema {
                 linea.println("Contacto: " + usuario.usuario.getNumero());
                 linea.println("fecha: " + usuario.usuario.folio.getFecha());
                 linea.println("Lugar: " + usuario.usuario.folio.getLugar());
-                linea.println("Sexo: " + usuario.usuario.sexo);
                 /*linea.println(usuario.getNombre());
                 linea.println(usuario.getContraseña());//Esta cifrada al acceder al método getContraseña
                 linea.println(usuario.getCuenta().getId());
@@ -173,7 +170,6 @@ public class Sistema {
                 linea.println("Contacto: " + usuario.usuario.getNumero());
                 linea.println("fecha: " + usuario.usuario.folio.getFecha());
                 linea.println("Lugar: " + usuario.usuario.folio.getLugar());
-                linea.println("Sexo: " + usuario.usuario.getSexo());
                 /*linea.println(usuario.getNombre());
                 linea.println(usuario.getContraseña());
                 linea.println(usuario.getCuenta().getId());
@@ -204,7 +200,6 @@ public class Sistema {
                     escribir.write("Contacto: " + user.getNumero() + System.getProperty("line.separator"));
                     escribir.write("fecha" + user.folio.getFecha() + System.getProperty("line.separator"));
                     escribir.write("Lugar" + user.folio.getLugar() + System.getProperty("line.separator"));
-                    escribir.write("Sexo" + user.getSexo() + System.getProperty("line.separator"));
                     for (int i = 0; i < 4; i++) {
                         cadena = lectura.readLine();
                     }

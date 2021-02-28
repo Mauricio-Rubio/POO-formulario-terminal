@@ -25,11 +25,10 @@ public class Persona {
     }
     
     
-    public Persona(String nombre, String correo, String tel, String sex){
+    public Persona(String nombre, String correo, String tel){
         this.nombre = nombre;
         this.correo = correo;
         this.numero = tel;
-        sexo = sex;
       /*  this.folio.fecha=datos.fecha;
         this.folio.lugar=datos.lugar;
         this.folio.folio=datos.folio;*/
