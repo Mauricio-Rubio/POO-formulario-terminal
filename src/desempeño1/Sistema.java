@@ -47,10 +47,15 @@ public class Sistema {
                 System.out.println("Registro Encontrado");
                 System.out.println("1 para consultar sus datos, 2 para actualizar datos");
                 eleccion = sc.nextInt();
-                System.out.println("sexo"+personaLogin.getSexo());
-                System.out.println("sexo"+usuarioActivo.getSexo());
                 if(eleccion == 1){
                     System.out.println(personaLogin);
+                }else if (eleccion == 2){
+                    System.out.println("Ingrese su correo electronico");
+                    sc.nextLine();
+                    personaLogin.correo=sc.nextLine();
+                    System.out.println("Ingrese su numero de contacto");
+                    personaLogin.numero=sc.nextLine();
+                    actualizarUsuario(personaLogin);
                 }
                 
                 
@@ -194,12 +199,11 @@ public class Sistema {
             while ((cadena = lectura.readLine()) != null) { //comparamos cadena, que alberga lectura de linea, con null
                 String borrarEspacios = cadena.trim();
                 if (borrarEspacios.equals(user.folio.getFolio())) {
-                    escribir.write("Folio: " + user.folio.getFolio() + System.getProperty("line.separator"));
+                    escribir.write("" + user.folio.getFolio() + System.getProperty("line.separator"));
                     escribir.write("" + user.getNombre() + System.getProperty("line.separator"));
-                    escribir.write("Correo" + user.getCorreo() + System.getProperty("line.separator"));
+                    escribir.write("Correo: " + user.getCorreo() + System.getProperty("line.separator"));
                     escribir.write("Contacto: " + user.getNumero() + System.getProperty("line.separator"));
-                    escribir.write("fecha" + user.folio.getFecha() + System.getProperty("line.separator"));
-                    escribir.write("Lugar" + user.folio.getLugar() + System.getProperty("line.separator"));
+                    escribir.write("" + user.folio.getFecha() + System.getProperty("line.separator"));
                     for (int i = 0; i < 4; i++) {
                         cadena = lectura.readLine();
                     }
