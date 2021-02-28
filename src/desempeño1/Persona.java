@@ -13,7 +13,7 @@ public class Persona {
     
     @Override
     public String toString(){
-        return ""+nombre+" , telefono: "+numero+" , correo: "+correo+" , sexo: "+sexo+" ,  "+folio; 
+        return ""+nombre+" , telefono: "+numero+" , "+correo+" , sexo: "+sexo+" ,  "+folio+" "+sexo; 
     }
     
     public  Persona (String nombre, String sexo, String edad, String celular, String correo){
@@ -25,10 +25,11 @@ public class Persona {
     }
     
     
-    public Persona(String nombre, String correo, String tel){
+    public Persona(String nombre, String correo, String tel, String sex){
         this.nombre = nombre;
         this.correo = correo;
         this.numero = tel;
+        sexo = sex;
       /*  this.folio.fecha=datos.fecha;
         this.folio.lugar=datos.lugar;
         this.folio.folio=datos.folio;*/
