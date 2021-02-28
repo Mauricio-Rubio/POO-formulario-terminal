@@ -1,12 +1,12 @@
-Folio: M8247
-Nombre: Mauricio Rubio
-Correo: mauricio.rubio
-Contacto: 55401744
-fecha: 02
-Lugar: cdmx
-Folio: F59114
-Nombre: Maria Elena 
-Correo: elena_haro1
-Contacto: 554071
-fecha: 02
-Lugar: Chihuahua
+Folio: M24779
+Nombre: Mauricio
+Correo electrónico: mau.r.h54
+Contacto: 558324
+fecha: 28022021
+Lugar: CDMX
+Folio: M93522
+Nombre: Mauricio Rubio Haro
+Correo electrónico: mau.r.h54
+Contacto: 556090
+fecha: 28022021
+Lugar: CDMX

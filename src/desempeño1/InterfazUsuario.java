@@ -55,12 +55,14 @@ public class InterfazUsuario {
     public void cuestionarioSalud(InterfazUsuario paciente) {
         System.out.println("Cuestionario de estado de salud");
         System.out.println("Ingrese su peso actual en kilogramos en formato 00.00");
-        String peso = sc.nextLine();
+        double peso = sc.nextDouble();
+        System.out.println("Ingrese su altura actual en metros  formato 00.00");
+        double altura = sc.nextDouble();
         String edad = paciente.usuario.edad;
-        System.out.println("Seleccione la opción que más de adecue con su seguro médico");
+        System.out.println("Seleccione la opción que más se adecue con su seguro médico");
         System.out.println("1.- ISSSTE, 2.- IMSS, 3.- ISEMYM, 4. Voluntario, 5 otro ");
         int eleccion = sc.nextInt();
-        String seguro;
+        String seguro="";
         switch (eleccion) {
             case 1:
                 seguro = "ISSSTE";
@@ -79,6 +81,37 @@ public class InterfazUsuario {
                 break;
 
         }
-        String telefono;
+        paciente.usuario.salud= new Salud(peso, altura, edad, seguro, paciente.usuario.getNumero(), calIMC(altura, peso), IMC(calIMC(altura, peso)));
+    }
+    
+    public double calIMC(double  altura, double peso){
+        double imc = peso / (altura * altura);
+        double res = Math.round(imc * 100.00)/100.0;
+        return res;
+    }
+    
+       private String IMC(double imc){
+        String res="";
+        if(imc <= 18.5){
+             res = "Bajo de peso";
+        }
+        else if(imc >= 18.5 && imc <24.99){
+             res = "Peso normal";
+        }
+        else if(imc >= 25 && imc <29.99){
+             res = "Sobrepeso";
+        }
+        else if(imc >= 30.0 && imc <34.99){
+             res = "Obesidad grado I";
+        }
+        else if(imc >= 35.00 && imc <39.99){
+             res = "Obesidad grado Il";
+        }
+        else if(imc > 40 ){
+             res = "Obesidad grado IlI";
+        }else{
+            res = "No disponible";
+        }
+        return res;
     }
 }

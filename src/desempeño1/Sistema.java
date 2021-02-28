@@ -34,6 +34,9 @@ public class Sistema {
             usuario.nuevaPersona();
             usuario.registrarUsuario(usuario);
             BaseDatos(usuario);
+            usuario.cuestionarioSalud(usuario);
+            System.out.println(usuario.usuario.salud.status);
+            System.out.printf("%.2f %n", usuario.usuario.salud.IMC);
         } else if (eleccion == 2) {
             System.out.println("Ingresa tu folio: ");
             sc.nextLine();
