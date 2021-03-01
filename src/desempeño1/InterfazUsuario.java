@@ -25,7 +25,6 @@ public class InterfazUsuario {
         System.out.println("Ingrese su correo");
         correo = sc.nextLine();
         usuario = new Persona(nombre, sexo, edad, celular, correo);
-        System.out.println(usuario);
         return usuario;
     }
 
@@ -40,7 +39,7 @@ public class InterfazUsuario {
         if (usuario.usuario.sexo.equals("M")) {
             usuario.usuario.folio = new Registro(fechaRes, lugar);
             usuario.usuario.folio.generarFolioM();
-            System.out.println(usuario.usuario.folio);
+            System.out.println("Tu folio es: "+usuario.usuario.folio.getFolio());
             System.out.println("Usuario hombre");
             return true;
         } else {

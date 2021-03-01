@@ -1,5 +1,10 @@
-Folio: M54283
-El paciente de folio: M54283, Mau mayor de edad
-Se encuentra pesando: 98.0, con altura de 1.83
-Notas: el paciente tiene un IMC de: 29.26 por lo se encuentra en Sobrepeso
-El paciente cuenta con una afiliación a: Voluntario
+Folio: M40186
+El paciente de folio: M40186, Mauricio Rubio Haro  es mayor de edad
+Se encuentra pesando: 98.5, con altura de 1.83
+Notas: el paciente tiene un IMC de: 29.41 por lo se encuentra en Sobrepeso
+El paciente cuenta con una afiliación a: ISSSTE
+Folio: M50542
+El paciente de folio: M50542, Javier Gutierrez es mayor de edad
+Se encuentra pesando: 70.0, con altura de 1.9
+Notas: el paciente tiene un IMC de: 19.39 por lo se encuentra en Peso normal
+El paciente cuenta con una afiliación a: otro

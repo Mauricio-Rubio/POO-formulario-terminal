@@ -43,13 +43,6 @@ public class Salud {
                 linea.println("Se encuentra pesando: " + pesoU + ", con altura de " + alturaU);
                 linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo se encuentra en " + usuario.IMC(imcU));
                 linea.println("El paciente cuenta con una afiliación a: " + usuario.usuario.salud.seguro);
-                /*linea.println(usuario.getNombre());
-                linea.println(usuario.getContraseña());//Esta cifrada al acceder al método getContraseña
-                linea.println(usuario.getCuenta().getId());
-                linea.println(usuario.getCuenta().consultar());*/
-                //System.out.println(usuario.getId());
-                //System.out.println(contraseña2);
-                //linea.println();
                 linea.close();
                 escribir.close();
             } catch (Exception e) {
@@ -64,17 +57,12 @@ public class Salud {
                 linea.println("Se encuentra pesando: " + pesoU + ", con altura de " + alturaU);
                 linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo se encuentra en " + usuario.IMC(imcU));
                 linea.println("El paciente cuenta con una afiliación a: " + usuario.usuario.salud.seguro);
-                /*linea.println(usuario.getNombre());
-                linea.println(usuario.getContraseña());
-                linea.println(usuario.getCuenta().getId());
-                linea.println(usuario.getCuenta().consultar());*/
-                //linea.println(email);
                 linea.close();
                 escribir.close();
             } catch (Exception e) {
             }
         }
-    }//acabo
+    }
     
     public String edadStatus(InterfazUsuario persona){
         int i = Integer.parseInt(persona.usuario.getEdad());
@@ -84,6 +72,4 @@ public class Salud {
             return "menor de edad";
         }
     }
-
-        
 }

@@ -23,10 +23,7 @@ public class Sistema {
         int eleccion = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Bienvenido al programa de vacunación que NO es político");
-        
         do{
-            
-        
         System.out.println("1 para registrarse, 2 para ingresar, 3 salir");
         eleccion = sc.nextInt();
         if (eleccion == 1) {
@@ -35,8 +32,6 @@ public class Sistema {
             usuario.registrarUsuario(usuario);
             BaseDatos(usuario);
             usuario.cuestionarioSalud(usuario);
-            System.out.println(usuario.usuario.salud.status);
-            System.out.printf("%.2f %n", usuario.usuario.salud.IMC);
         } else if (eleccion == 2) {
             System.out.println("Ingresa tu folio: ");
             sc.nextLine();
