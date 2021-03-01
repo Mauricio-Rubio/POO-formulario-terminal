@@ -1,0 +1,5 @@
+Folio: M54283
+El paciente de folio: M54283, Mau mayor de edad
+Se encuentra pesando: 98.0, con altura de 1.83
+Notas: el paciente tiene un IMC de: 29.26 por lo se encuentra en Sobrepeso
+El paciente cuenta con una afiliación a: Voluntario

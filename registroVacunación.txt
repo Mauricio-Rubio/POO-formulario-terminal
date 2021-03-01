@@ -1,12 +1,6 @@
-Folio: M24779
-Nombre: Mauricio
+Folio: M54283
+Nombre: Mau
 Correo electrónico: mau.r.h54
-Contacto: 558324
+Contacto: 5540
 fecha: 28022021
-Lugar: CDMX
-Folio: M93522
-Nombre: Mauricio Rubio Haro
-Correo electrónico: mau.r.h54
-Contacto: 556090
-fecha: 28022021
-Lugar: CDMX
+Lugar: cdmx

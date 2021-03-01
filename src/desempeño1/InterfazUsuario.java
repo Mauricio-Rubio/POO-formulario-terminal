@@ -82,6 +82,7 @@ public class InterfazUsuario {
 
         }
         paciente.usuario.salud= new Salud(peso, altura, edad, seguro, paciente.usuario.getNumero(), calIMC(altura, peso), IMC(calIMC(altura, peso)));
+        paciente.usuario.salud.BaseDatos(paciente);
     }
     
     public double calIMC(double  altura, double peso){
@@ -90,7 +91,7 @@ public class InterfazUsuario {
         return res;
     }
     
-       private String IMC(double imc){
+       public String IMC(double imc){
         String res="";
         if(imc <= 18.5){
              res = "Bajo de peso";
