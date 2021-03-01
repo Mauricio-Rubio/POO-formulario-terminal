@@ -13,7 +13,7 @@ public class Persona {
     
     @Override
     public String toString(){
-        return ""+nombre+" , telefono: "+numero+" , "+correo+" , sexo: "+sexo+" ,  "+folio+" "+sexo; 
+        return ""+nombre+" , telefono: "+numero+" , "+correo+" , sexo: "+sexo+" ,  "+folio; 
     }
     
     public  Persona (String nombre, String sexo, String edad, String celular, String correo){

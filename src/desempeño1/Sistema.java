@@ -17,12 +17,13 @@ import java.util.logging.Logger;
 
 public class Sistema {
 
-    Persona usuarioActivo;
+    protected Persona usuarioActivo;
 
     public void iniciar() {
         int eleccion = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Bienvenido al programa de vacunación que NO es político");
+        System.out.println("-------------------------------------------------------------------------------");
         do{
         System.out.println("1 para registrarse, 2 para ingresar, 3 salir");
         eleccion = sc.nextInt();
@@ -43,11 +44,14 @@ public class Sistema {
                 //personaLogin.folio.folio=folioLogin;
                 personaLogin.sexo = String.valueOf(folioLogin.charAt(7));
                 System.out.println("Registro Encontrado");
+                System.out.println("-------------------------------------------------------------------------------");
                 System.out.println("1 para consultar sus datos, 2 para actualizar datos");
+                System.out.println("-------------------------------------------------------------------------------");
                 eleccion = sc.nextInt();
                 if(eleccion == 1){
                     System.out.println(personaLogin);
                 }else if (eleccion == 2){
+                    System.out.println("-------------------------------------------------------------------------------");
                     System.out.println("Ingrese su correo electronico");
                     sc.nextLine();
                     personaLogin.correo=sc.nextLine();
@@ -59,6 +63,7 @@ public class Sistema {
                 
             }
         }else if(eleccion == 3){
+            System.out.println("-------------------------------------------------------------------------------");
             break;
         } 
         
@@ -103,7 +108,6 @@ public class Sistema {
                         }*/
                         Persona userBusqueda = new Persona(nombreUsuario, correoUsuario, contactoUsuario);
                         userBusqueda.folio = new Registro(folioUsuario, fechaRegistro, lugarUsuario); 
-                        System.out.println(userBusqueda.getSexo());
                         //userBusqueda.folio.folio=folioUsuario;
                         //userBusqueda.folio.fecha=fechaRegistro;
                         //userBusqueda.folio.lugar=lugarUsuario;                        
