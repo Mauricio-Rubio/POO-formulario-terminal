@@ -66,7 +66,7 @@ public class Salud {
     
     public String edadStatus(InterfazUsuario persona){
         int i = Integer.parseInt(persona.usuario.getEdad());
-        if(18 >= 1){
+        if( i >= 18 ){
             return "mayor de edad";
         }else{
             return "menor de edad";

@@ -10,3 +10,15 @@ Correo electrónico: javier.gutierrez
 Contacto: 55678903
 fecha: 25022021
 Lugar: Chihuahua
+Folio: M40153
+Nombre: Diego Rubio
+Correo electrónico: mau.r.h5678
+Contacto: 5566778899
+fecha: 21022021
+Lugar: cdmx
+Folio: M62955
+Nombre: Mauricio Rubio Haro
+Correo electrónico: MARUCA_RUBIO
+Contacto: 5520202020
+fecha: 22022021
+Lugar: cdmx
