@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class InterfazUsuario {
 
-    Persona usuario;
+    protected Persona usuario;
     Scanner sc = new Scanner(System.in);
 
     public Persona nuevaPersona() {

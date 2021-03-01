@@ -1,20 +1,5 @@
-Folio: M40186
-El paciente de folio: M40186, Mauricio Rubio Haro  es mayor de edad
-Se encuentra pesando: 98.5, con altura de 1.83
-Notas: el paciente tiene un IMC de: 29.41 por lo se encuentra en Sobrepeso
-El paciente cuenta con una afiliación a: ISSSTE
-Folio: M50542
-El paciente de folio: M50542, Javier Gutierrez es mayor de edad
-Se encuentra pesando: 70.0, con altura de 1.9
-Notas: el paciente tiene un IMC de: 19.39 por lo se encuentra en Peso normal
-El paciente cuenta con una afiliación a: otro
-Folio: M40153
-El paciente de folio: M40153, Diego Rubio es menor de edad
-Se encuentra pesando: 105.0, con altura de 1.86
-Notas: el paciente tiene un IMC de: 30.35 por lo se encuentra en Obesidad grado I
-El paciente cuenta con una afiliación a: otro
-Folio: M62955
-El paciente de folio: M62955, Mauricio Rubio Haro es mayor de edad
-Se encuentra pesando: 120.0, con altura de 1.78
-Notas: el paciente tiene un IMC de: 37.87 por lo se encuentra en Obesidad grado Il
+Folio: M39986
+El paciente de folio: M39986, Mauricio Rubio Haro  es menor de edad
+Se encuentra pesando: 97.0, con altura de 1.84
+Notas: el paciente tiene un IMC de: 28.65 por lo se encuentra en Sobrepeso
 El paciente cuenta con una afiliación a: ISSSTE

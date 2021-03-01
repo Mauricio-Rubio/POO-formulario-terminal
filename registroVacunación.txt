@@ -1,24 +1,6 @@
-Folio: M40186
+Folio: M39986
 Nombre: Mauricio Rubio Haro
-Correo electrónico: mau.r.h54
-Contacto: 5583432424
-fecha: 28022021
+Correo: mau.r.h54
+Contacto: 55202281
+fecha: 20022021
 Lugar: CDMX
-Folio: M50542
-Nombre: Javier Gutierrez
-Correo electrónico: javier.gutierrez
-Contacto: 55678903
-fecha: 25022021
-Lugar: Chihuahua
-Folio: M40153
-Nombre: Diego Rubio
-Correo electrónico: mau.r.h5678
-Contacto: 5566778899
-fecha: 21022021
-Lugar: cdmx
-Folio: M62955
-Nombre: Mauricio Rubio Haro
-Correo electrónico: MARUCA_RUBIO
-Contacto: 5520202020
-fecha: 22022021
-Lugar: cdmx

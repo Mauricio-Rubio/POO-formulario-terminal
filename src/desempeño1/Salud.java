@@ -6,13 +6,13 @@ import java.io.PrintWriter;
 
 public class Salud {
 
-    double peso;
-    double altura;
-    String edad;
-    String seguro;
-    String telefono;
-    double IMC;
-    String status;
+    private double peso;
+    private double altura;
+    private String edad;
+    private String seguro;
+    private String telefono;
+    private double IMC;
+    private String status;
 
     public Salud(double peso, double altura, String edad, String seguro, String telefono, double imc, String status) {
         this.peso = peso;
@@ -39,7 +39,7 @@ public class Salud {
                 linea = new PrintWriter(escribir);
                 //escribir en el archivo
                 linea.println("Folio: " + usuario.usuario.folio.getFolio());
-                linea.println("El paciente de folio: " + usuario.usuario.folio.getFolio() + ", " + usuario.usuario.getNombre() +"  es "+usuario.usuario.salud.edadStatus(usuario));
+                linea.println("El paciente de folio: " + usuario.usuario.folio.getFolio() + ", " + usuario.usuario.getNombre() + "  es " + usuario.usuario.salud.edadStatus(usuario));
                 linea.println("Se encuentra pesando: " + pesoU + ", con altura de " + alturaU);
                 linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo se encuentra en " + usuario.IMC(imcU));
                 linea.println("El paciente cuenta con una afiliación a: " + usuario.usuario.salud.seguro);
@@ -52,8 +52,8 @@ public class Salud {
                 escribir = new FileWriter(archivo, true);
                 linea = new PrintWriter(escribir);
                 //escribir en el archivo
-                 linea.println("Folio: " + usuario.usuario.folio.getFolio());
-                linea.println("El paciente de folio: " + usuario.usuario.folio.getFolio() + ", " + usuario.usuario.getNombre() +" es "+usuario.usuario.salud.edadStatus(usuario));
+                linea.println("Folio: " + usuario.usuario.folio.getFolio());
+                linea.println("El paciente de folio: " + usuario.usuario.folio.getFolio() + ", " + usuario.usuario.getNombre() + " es " + usuario.usuario.salud.edadStatus(usuario));
                 linea.println("Se encuentra pesando: " + pesoU + ", con altura de " + alturaU);
                 linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo se encuentra en " + usuario.IMC(imcU));
                 linea.println("El paciente cuenta con una afiliación a: " + usuario.usuario.salud.seguro);
@@ -63,12 +63,12 @@ public class Salud {
             }
         }
     }
-    
-    public String edadStatus(InterfazUsuario persona){
+
+    public String edadStatus(InterfazUsuario persona) {
         int i = Integer.parseInt(persona.usuario.getEdad());
-        if( i >= 18 ){
+        if (i >= 18) {
             return "mayor de edad";
-        }else{
+        } else {
             return "menor de edad";
         }
     }
