@@ -11,13 +11,19 @@ public class Registro {
 
     @Override
     public String toString() {
-        return "Folio generado: " + folio + " , el: " + fecha + " , para alcaldía: " + lugar;
+        return " " + folio + " , " + fecha + " ,  " + lugar;
     }
 
     public void registrar(Persona usuario) {
 
     }
 
+    public Registro(String folio, String fecha, String lugar) {
+        this.folio = folio;
+        this.fecha = fecha;
+        this.lugar= lugar;
+    }
+    
     public Registro(String fecha, String lugar) {
         this.fecha = fecha;
         this.lugar = lugar;
@@ -29,7 +35,7 @@ public class Registro {
         String aleatorio = String.valueOf(n);
         //aleatorio = rnd.nextInt()*100 + 0;
         //String nAleatorio = String.valueOf(aleatorio);
-        folio = "H" + aleatorio;
+        folio = "M" + aleatorio;
         System.out.println(folio);
     }
 
@@ -39,8 +45,19 @@ public class Registro {
         String aleatorio = String.valueOf(n);
         //aleatorio = rnd.nextInt()*100 + 0;
         //String nAleatorio = String.valueOf(aleatorio);
-        folio = "M" + aleatorio;
+        folio = "F" + aleatorio;
         System.out.println(folio);
     }
-
+    
+    public String getFolio(){
+        return folio;
+    }
+    
+    public String getFecha(){
+        return fecha;
+    }
+    
+    public String getLugar(){
+        return lugar;
+    }
 }
