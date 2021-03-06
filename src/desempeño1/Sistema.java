@@ -1,4 +1,5 @@
 package desempeño1;
+import Funciones.*;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -28,11 +29,11 @@ public class Sistema {
         System.out.println("1 para registrarse, 2 para ingresar, 3 salir");
         eleccion = sc.nextInt();
         if (eleccion == 1) {
-            InterfazUsuario usuario = new InterfazUsuario();
-            usuario.nuevaPersona();
-            usuario.registrarUsuario(usuario);
-            BaseDatos(usuario);
-            usuario.cuestionarioSalud(usuario);
+            InterfazUsuario us = new InterfazUsuario();
+            us.nuevaPersona();
+            us.registrarUsuario(us);
+            Funciones.archivosTxt.BaseDatos(us.usuario);
+//            usuario.cuestionarioSalud(usuario);
         } else if (eleccion == 2) {
             System.out.println("Ingresa tu folio: ");
             sc.nextLine();
@@ -138,56 +139,7 @@ public class Sistema {
         return false;
     }
 
-    public void BaseDatos(InterfazUsuario usuario) {
-        File archivo; //manipula el archivo
-        FileWriter escribir; // escribir en el archivo
-        PrintWriter linea; // 
-        archivo = new File("registroVacunación.txt");
-        if (!archivo.exists()) {
-            try {
-                archivo.createNewFile();
-                escribir = new FileWriter(archivo, true);
-                linea = new PrintWriter(escribir);
-                //escribir en el archivo
-                linea.println("Folio: " + usuario.usuario.folio.getFolio());
-                linea.println("Nombre: " + usuario.usuario.getNombre());
-                linea.println("Correo electrónico: " + usuario.usuario.getCorreo());
-                linea.println("Contacto: " + usuario.usuario.getNumero());
-                linea.println("fecha: " + usuario.usuario.folio.getFecha());
-                linea.println("Lugar: " + usuario.usuario.folio.getLugar());
-                /*linea.println(usuario.getNombre());
-                linea.println(usuario.getContraseña());//Esta cifrada al acceder al método getContraseña
-                linea.println(usuario.getCuenta().getId());
-                linea.println(usuario.getCuenta().consultar());*/
-                //System.out.println(usuario.getId());
-                //System.out.println(contraseña2);
-                //linea.println();
-                linea.close();
-                escribir.close();
-            } catch (Exception e) {
-            }
-        } else {
-            try {
-                escribir = new FileWriter(archivo, true);
-                linea = new PrintWriter(escribir);
-                //escribir en el archivo
-                linea.println("Folio: " + usuario.usuario.folio.getFolio());
-                linea.println("Nombre: " + usuario.usuario.getNombre());
-                linea.println("Correo electrónico: " + usuario.usuario.getCorreo());
-                linea.println("Contacto: " + usuario.usuario.getNumero());
-                linea.println("fecha: " + usuario.usuario.folio.getFecha());
-                linea.println("Lugar: " + usuario.usuario.folio.getLugar());
-                /*linea.println(usuario.getNombre());
-                linea.println(usuario.getContraseña());
-                linea.println(usuario.getCuenta().getId());
-                linea.println(usuario.getCuenta().consultar());*/
-                //linea.println(email);
-                linea.close();
-                escribir.close();
-            } catch (Exception e) {
-            }
-        }
-    }//acabo
+
 
     public Persona actualizarUsuario(Persona user) {
         File archivoTemporal;

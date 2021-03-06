@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Registro {
 
-    private String folio;
-    private String fecha;
-    private String lugar;
+    public String folio;
+    public String fecha;
+    public String lugar;
     Scanner sc = new Scanner(System.in);
 
     @Override

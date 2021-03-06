@@ -1,5 +1,0 @@
-Folio: M39986
-El paciente de folio: M39986, Mauricio Rubio Haro  es menor de edad
-Se encuentra pesando: 97.0, con altura de 1.84
-Notas: el paciente tiene un IMC de: 28.65 por lo se encuentra en Sobrepeso
-El paciente cuenta con una afiliación a: ISSSTE
