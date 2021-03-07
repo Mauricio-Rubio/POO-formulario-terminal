@@ -1,13 +1,13 @@
 package desempeño1;
 
 public class Persona {
-    String nombre;
-    String numero;
-    String correo;
-    String sexo;
-    String edad;
-    Registro folio;
-    Salud salud;
+    private String nombre;
+    private String numero;
+    private String correo;
+    private String sexo;
+    private String edad;
+    public Registro folio;
+    public Salud salud;
 
 
     
@@ -34,24 +34,62 @@ public class Persona {
         this.folio.folio=datos.folio;*/
         
     }
-    
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
-    
-    public String getEdad(){
-        return edad;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
-    public String getNumero(){
-        return String.valueOf(numero);
+
+    public String getNumero() {
+        return numero;
     }
-    
-    public String getCorreo(){
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getCorreo() {
         return correo;
     }
-    
-    public String getSexo(){
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getSexo() {
         return sexo;
     }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public Registro getFolio() {
+        return folio;
+    }
+
+    public void setFolio(Registro folio) {
+        this.folio = folio;
+    }
+
+    public Salud getSalud() {
+        return salud;
+    }
+
+    public void setSalud(Salud salud) {
+        this.salud = salud;
+    }
+    
+
 }

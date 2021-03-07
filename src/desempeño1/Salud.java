@@ -1,9 +1,5 @@
 package desempeño1;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-
 public class Salud {
 
     private double peso;
@@ -24,48 +20,66 @@ public class Salud {
         this.status = status;
     }
 
-    public void BaseDatos(InterfazUsuario usuario) {
-        double pesoU = usuario.usuario.salud.peso;
-        double alturaU = usuario.usuario.salud.altura;
-        double imcU = usuario.calIMC(alturaU, pesoU);
-        File archivo; //manipula el archivo
-        FileWriter escribir; // escribir en el archivo
-        PrintWriter linea; // 
-        archivo = new File("estadoSalud.txt");
-        if (!archivo.exists()) {
-            try {
-                archivo.createNewFile();
-                escribir = new FileWriter(archivo, true);
-                linea = new PrintWriter(escribir);
-                //escribir en el archivo
-                linea.println("Folio: " + usuario.usuario.folio.getFolio());
-                linea.println("El paciente de folio: " + usuario.usuario.folio.getFolio() + ", " + usuario.usuario.getNombre() + "  es " + usuario.usuario.salud.edadStatus(usuario));
-                linea.println("Se encuentra pesando: " + pesoU + ", con altura de " + alturaU);
-                linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo se encuentra en " + usuario.IMC(imcU));
-                linea.println("El paciente cuenta con una afiliación a: " + usuario.usuario.salud.seguro);
-                linea.close();
-                escribir.close();
-            } catch (Exception e) {
-            }
-        } else {
-            try {
-                escribir = new FileWriter(archivo, true);
-                linea = new PrintWriter(escribir);
-                //escribir en el archivo
-                linea.println("Folio: " + usuario.usuario.folio.getFolio());
-                linea.println("El paciente de folio: " + usuario.usuario.folio.getFolio() + ", " + usuario.usuario.getNombre() + " es " + usuario.usuario.salud.edadStatus(usuario));
-                linea.println("Se encuentra pesando: " + pesoU + ", con altura de " + alturaU);
-                linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo se encuentra en " + usuario.IMC(imcU));
-                linea.println("El paciente cuenta con una afiliación a: " + usuario.usuario.salud.seguro);
-                linea.close();
-                escribir.close();
-            } catch (Exception e) {
-            }
-        }
+    
+
+    public double getPeso() {
+        return peso;
     }
 
-    public String edadStatus(InterfazUsuario persona) {
-        int i = Integer.parseInt(persona.usuario.getEdad());
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getSeguro() {
+        return seguro;
+    }
+
+    public void setSeguro(String seguro) {
+        this.seguro = seguro;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public double getIMC() {
+        return IMC;
+    }
+
+    public void setIMC(double IMC) {
+        this.IMC = IMC;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String edadStatus(Persona persona) {
+        int i = Integer.parseInt(persona.getEdad());
         if (i >= 18) {
             return "mayor de edad";
         } else {

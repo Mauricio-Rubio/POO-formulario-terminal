@@ -1,4 +1,4 @@
-package desempeño1;
+ package desempeño1;
 
 import java.util.Scanner;
 
@@ -36,16 +36,14 @@ public class InterfazUsuario {
         String fechaRes = fecha.replace("-","");
         System.out.println("Ingrese el estado donde reside");
         lugar = sc.nextLine();
-        if (usuario.usuario.sexo.equals("M")) {
+        if (usuario.usuario.getSexo().equals("M")) {
             usuario.usuario.folio = new Registro(fechaRes, lugar);
             usuario.usuario.folio.generarFolioM();
-            System.out.println("Tu folio es: "+usuario.usuario.folio.getFolio());
             System.out.println("Usuario hombre");
             return true;
         } else {
             usuario.usuario.folio = new Registro(fechaRes, lugar);
             usuario.usuario.folio.generarFolioF();
-            System.out.println(usuario.usuario.folio);
             System.out.println("Usuario mujer");
             return true;
         }
@@ -57,7 +55,7 @@ public class InterfazUsuario {
         double peso = sc.nextDouble();
         System.out.println("Ingrese su altura actual en metros  formato 00.00");
         double altura = sc.nextDouble();
-        String edad = paciente.usuario.edad;
+        String edad = paciente.usuario.getEdad();
         System.out.println("Seleccione la opción que más se adecue con su seguro médico");
         System.out.println("1.- ISSSTE, 2.- IMSS, 3.- ISEMYM, 4. Voluntario, 5 otro ");
         int eleccion = sc.nextInt();
@@ -80,36 +78,30 @@ public class InterfazUsuario {
                 break;
 
         }
-        paciente.usuario.salud= new Salud(peso, altura, edad, seguro, paciente.usuario.getNumero(), calIMC(altura, peso), IMC(calIMC(altura, peso)));
-        paciente.usuario.salud.BaseDatos(paciente);
+      paciente.usuario.salud = new Salud(peso, altura, paciente.usuario.getEdad(), seguro, paciente.usuario.getNumero(), paciente.calIMC(altura, peso), paciente.IMC(paciente.calIMC(altura, peso)));
+        Funciones.archivosTxt.BaseDatosSalud(paciente.usuario, paciente);
     }
-    
-    public double calIMC(double  altura, double peso){
+    public double calIMC(double altura, double peso) {
         double imc = peso / (altura * altura);
-        double res = Math.round(imc * 100.00)/100.0;
+        double res = Math.round(imc * 100.00) / 100.0;
         return res;
     }
-    
-       public String IMC(double imc){
-        String res="";
-        if(imc <= 18.5){
-             res = "Bajo de peso";
-        }
-        else if(imc >= 18.5 && imc <24.99){
-             res = "Peso normal";
-        }
-        else if(imc >= 25 && imc <29.99){
-             res = "Sobrepeso";
-        }
-        else if(imc >= 30.0 && imc <34.99){
-             res = "Obesidad grado I";
-        }
-        else if(imc >= 35.00 && imc <39.99){
-             res = "Obesidad grado Il";
-        }
-        else if(imc > 40 ){
-             res = "Obesidad grado IlI";
-        }else{
+
+    public String IMC(double imc) {
+        String res = "";
+        if (imc <= 18.5) {
+            res = "Bajo de peso";
+        } else if (imc >= 18.5 && imc < 24.99) {
+            res = "Peso normal";
+        } else if (imc >= 25 && imc < 29.99) {
+            res = "Sobrepeso";
+        } else if (imc >= 30.0 && imc < 34.99) {
+            res = "Obesidad grado I";
+        } else if (imc >= 35.00 && imc < 39.99) {
+            res = "Obesidad grado Il";
+        } else if (imc > 40) {
+            res = "Obesidad grado IlI";
+        } else {
             res = "No disponible";
         }
         return res;
