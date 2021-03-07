@@ -169,7 +169,7 @@ public class archivosTxt {
                 linea.println("Folio: " + usuario.folio.getFolio());
                 linea.println("El paciente de folio: " + usuario.folio.getFolio() + ", " + usuario.getNombre() + "  es " + usuario.salud.edadStatus(usuario));
                 linea.println("Se encuentra pesando: " + pesoU + ", con altura de " + alturaU);
-                linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo se encuentra en " + us.IMC(imcU));
+                linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo que se encuentra en " + us.IMC(imcU));
                 linea.println("El paciente cuenta con una afiliación a: " + usuario.salud.getSeguro());
                 linea.close();
                 escribir.close();
@@ -183,7 +183,7 @@ public class archivosTxt {
                 linea.println("Folio: " + usuario.folio.getFolio());
                 linea.println("El paciente de folio: " + usuario.folio.getFolio() + ", " + usuario.getNombre() + "  es " + usuario.salud.edadStatus(usuario));
                 linea.println("Se encuentra pesando: " + pesoU + ", con altura de " + alturaU);
-                linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo se encuentra en " + us.IMC(imcU));
+                linea.println("Notas: el paciente tiene un IMC de: " + imcU + " por lo que se encuentra en " + us.IMC(imcU));
                 linea.println("El paciente cuenta con una afiliación a: " + usuario.salud.getSeguro());
                 linea.close();
                 escribir.close();

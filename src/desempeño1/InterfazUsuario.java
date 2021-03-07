@@ -36,16 +36,14 @@ public class InterfazUsuario {
         String fechaRes = fecha.replace("-","");
         System.out.println("Ingrese el estado donde reside");
         lugar = sc.nextLine();
-        if (usuario.usuario.sexo.equals("M")) {
+        if (usuario.usuario.getSexo().equals("M")) {
             usuario.usuario.folio = new Registro(fechaRes, lugar);
             usuario.usuario.folio.generarFolioM();
-            System.out.println("Tu folio es: "+usuario.usuario.folio.getFolio());
             System.out.println("Usuario hombre");
             return true;
         } else {
             usuario.usuario.folio = new Registro(fechaRes, lugar);
             usuario.usuario.folio.generarFolioF();
-            System.out.println(usuario.usuario.folio);
             System.out.println("Usuario mujer");
             return true;
         }
@@ -57,7 +55,7 @@ public class InterfazUsuario {
         double peso = sc.nextDouble();
         System.out.println("Ingrese su altura actual en metros  formato 00.00");
         double altura = sc.nextDouble();
-        String edad = paciente.usuario.edad;
+        String edad = paciente.usuario.getEdad();
         System.out.println("Seleccione la opción que más se adecue con su seguro médico");
         System.out.println("1.- ISSSTE, 2.- IMSS, 3.- ISEMYM, 4. Voluntario, 5 otro ");
         int eleccion = sc.nextInt();

@@ -1,10 +1,20 @@
-Folio: M93796
-El paciente de folio: M93796, Diego Ru  es menor de edad
-Se encuentra pesando: 105.0, con altura de 1.85
-Notas: el paciente tiene un IMC de: 30.68 por lo se encuentra en Obesidad grado I
-El paciente cuenta con una afiliación a: ISSSTE
-Folio: M76583
-El paciente de folio: M76583, Mauricio Rubio Camacho  es mayor de edad
-Se encuentra pesando: 115.0, con altura de 1.77
-Notas: el paciente tiene un IMC de: 36.71 por lo se encuentra en Obesidad grado Il
+Folio: M16443
+El paciente de folio: M16443, Mauricio Rubio Haro  es menor de edad
+Se encuentra pesando: 96.0, con altura de 1.83
+Notas: el paciente tiene un IMC de: 28.67 por lo se encuentra en Sobrepeso
+El paciente cuenta con una afiliación a: otro
+Folio: F57613
+El paciente de folio: F57613, Maria Elena  es mayor de edad
+Se encuentra pesando: 110.0, con altura de 1.68
+Notas: el paciente tiene un IMC de: 38.97 por lo se encuentra en Obesidad grado Il
+El paciente cuenta con una afiliación a: otro
+Folio: M63642
+El paciente de folio: M63642, Daniel Cuevas  es mayor de edad
+Se encuentra pesando: 75.0, con altura de 1.83
+Notas: el paciente tiene un IMC de: 22.4 por lo que se encuentra en Peso normal
+El paciente cuenta con una afiliación a: ISEMYM
+Folio: M47822
+El paciente de folio: M47822, ds  es menor de edad
+Se encuentra pesando: 50.0, con altura de 1.0
+Notas: el paciente tiene un IMC de: 50.0 por lo que se encuentra en Obesidad grado IlI
 El paciente cuenta con una afiliación a: ISSSTE

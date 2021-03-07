@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Registro {
 
-    public String folio;
-    public String fecha;
-    public String lugar;
+    private String folio;
+    private String fecha;
+    private String lugar;
     Scanner sc = new Scanner(System.in);
 
     @Override
@@ -33,18 +33,13 @@ public class Registro {
         int n = 0;
         n = (int) (Math.random() * (99999 - 00001) + 00001);
         String aleatorio = String.valueOf(n);
-        //aleatorio = rnd.nextInt()*100 + 0;
-        //String nAleatorio = String.valueOf(aleatorio);
         folio = "M" + aleatorio;
-        System.out.println(folio);
     }
 
     public void generarFolioF() {
         int n = 0;
         n = (int) (Math.random() * (99999 - 00001) + 00001);
         String aleatorio = String.valueOf(n);
-        //aleatorio = rnd.nextInt()*100 + 0;
-        //String nAleatorio = String.valueOf(aleatorio);
         folio = "F" + aleatorio;
         System.out.println(folio);
     }

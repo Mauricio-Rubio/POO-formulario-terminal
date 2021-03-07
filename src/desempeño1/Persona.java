@@ -1,11 +1,11 @@
 package desempeño1;
 
 public class Persona {
-    protected String nombre;
-    protected String numero;
-    protected String correo;
-    protected String sexo;
-    protected String edad;
+    private String nombre;
+    private String numero;
+    private String correo;
+    private String sexo;
+    private String edad;
     public Registro folio;
     public Salud salud;
 
