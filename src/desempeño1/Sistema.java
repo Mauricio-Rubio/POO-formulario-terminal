@@ -1,20 +1,5 @@
 package desempeño1;
-import Funciones.*;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Sistema {
 
@@ -33,7 +18,7 @@ public class Sistema {
             us.nuevaPersona();
             us.registrarUsuario(us);
             Funciones.archivosTxt.BaseDatos(us.usuario);
-//            usuario.cuestionarioSalud(usuario);
+            us.cuestionarioSalud(us);
         } else if (eleccion == 2) {
             System.out.println("Ingresa tu folio: ");
             sc.nextLine();
@@ -58,10 +43,8 @@ public class Sistema {
                     usuarioActivo.correo=sc.nextLine();
                     System.out.println("Ingrese su numero de contacto");
                     usuarioActivo.numero=sc.nextLine();
-                    actualizarUsuario(usuarioActivo);
+                    Funciones.archivosTxt.actualizarUsuario(usuarioActivo);
                 }
-                
-                
             }
         }else if(eleccion == 3){
             System.out.println("-------------------------------------------------------------------------------");
@@ -72,53 +55,5 @@ public class Sistema {
             System.out.println("Ingrese una opción válida por favor");
         }
         }while(eleccion == 1 || eleccion == 2);
-    }
-
-
-
-
-
-    public Persona actualizarUsuario(Persona user) {
-        File archivoTemporal;
-        archivoTemporal = new File("temp.txt");
-        File archivoLectura;
-        archivoLectura = new File("registroVacunación.txt");
-        try {
-            BufferedWriter escribir = new BufferedWriter(new FileWriter(archivoTemporal));
-            BufferedReader lectura = new BufferedReader(new FileReader(archivoLectura));
-            String cadena;
-            while ((cadena = lectura.readLine()) != null) { //comparamos cadena, que alberga lectura de linea, con null
-                String borrarEspacios = cadena.trim();
-                if (borrarEspacios.equals(user.folio.getFolio())) {
-                    escribir.write("" + user.folio.getFolio() + System.getProperty("line.separator"));
-                    escribir.write("" + user.getNombre() + System.getProperty("line.separator"));
-                    escribir.write("Correo: " + user.getCorreo() + System.getProperty("line.separator"));
-                    escribir.write("Contacto: " + user.getNumero() + System.getProperty("line.separator"));
-                    escribir.write("" + user.folio.getFecha() + System.getProperty("line.separator"));
-                    for (int i = 0; i < 4; i++) {
-                        cadena = lectura.readLine();
-                    }
-                    continue; //sale de la iteracion. No ejecuta nada continuo
-                }
-                escribir.write(cadena + System.getProperty("line.separator"));
-            }
-
-            lectura.close();
-            escribir.close();
-
-            if (archivoLectura.exists()) {
-                //Boolean resultados = archivoTemporal.renameTo(new File());
-
-                Files.move(Paths.get(archivoTemporal.getAbsolutePath()), Paths.get(archivoLectura.getAbsolutePath()), StandardCopyOption.REPLACE_EXISTING);
-                //Files.move(archivoTemporal.toPath(), archivoLectura.toPath(), StandardCopyOption.REPLACE_EXISTING);
-            } else {
-                System.out.println("Error: No archivo lectura");
-            }
-
-        } catch (IOException x) {
-            System.out.println("Error: " + x);
-        }
-
-        return null;
     }
 }

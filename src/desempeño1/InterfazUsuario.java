@@ -80,36 +80,30 @@ public class InterfazUsuario {
                 break;
 
         }
-        paciente.usuario.salud= new Salud(peso, altura, edad, seguro, paciente.usuario.getNumero(), calIMC(altura, peso), IMC(calIMC(altura, peso)));
-        paciente.usuario.salud.BaseDatos(paciente);
+      paciente.usuario.salud = new Salud(peso, altura, paciente.usuario.getEdad(), seguro, paciente.usuario.getNumero(), paciente.calIMC(altura, peso), paciente.IMC(paciente.calIMC(altura, peso)));
+        Funciones.archivosTxt.BaseDatosSalud(paciente.usuario, paciente);
     }
-    
-    public double calIMC(double  altura, double peso){
+    public double calIMC(double altura, double peso) {
         double imc = peso / (altura * altura);
-        double res = Math.round(imc * 100.00)/100.0;
+        double res = Math.round(imc * 100.00) / 100.0;
         return res;
     }
-    
-       public String IMC(double imc){
-        String res="";
-        if(imc <= 18.5){
-             res = "Bajo de peso";
-        }
-        else if(imc >= 18.5 && imc <24.99){
-             res = "Peso normal";
-        }
-        else if(imc >= 25 && imc <29.99){
-             res = "Sobrepeso";
-        }
-        else if(imc >= 30.0 && imc <34.99){
-             res = "Obesidad grado I";
-        }
-        else if(imc >= 35.00 && imc <39.99){
-             res = "Obesidad grado Il";
-        }
-        else if(imc > 40 ){
-             res = "Obesidad grado IlI";
-        }else{
+
+    public String IMC(double imc) {
+        String res = "";
+        if (imc <= 18.5) {
+            res = "Bajo de peso";
+        } else if (imc >= 18.5 && imc < 24.99) {
+            res = "Peso normal";
+        } else if (imc >= 25 && imc < 29.99) {
+            res = "Sobrepeso";
+        } else if (imc >= 30.0 && imc < 34.99) {
+            res = "Obesidad grado I";
+        } else if (imc >= 35.00 && imc < 39.99) {
+            res = "Obesidad grado Il";
+        } else if (imc > 40) {
+            res = "Obesidad grado IlI";
+        } else {
             res = "No disponible";
         }
         return res;

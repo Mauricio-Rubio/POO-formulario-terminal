@@ -1,0 +1,10 @@
+Folio: M93796
+El paciente de folio: M93796, Diego Ru  es menor de edad
+Se encuentra pesando: 105.0, con altura de 1.85
+Notas: el paciente tiene un IMC de: 30.68 por lo se encuentra en Obesidad grado I
+El paciente cuenta con una afiliación a: ISSSTE
+Folio: M76583
+El paciente de folio: M76583, Mauricio Rubio Camacho  es mayor de edad
+Se encuentra pesando: 115.0, con altura de 1.77
+Notas: el paciente tiene un IMC de: 36.71 por lo se encuentra en Obesidad grado Il
+El paciente cuenta con una afiliación a: ISSSTE
